@@ -18,13 +18,14 @@ RUN adduser --disabled-password --gecos '' bootcamp && \
 
 USER bootcamp
 
-RUN sudo mkdir -p /tmp/semver/ && \
-    git clone https://github.com/fsaintjacques/semver-tool.git /tmp/semver/ && \
-    sudo cp -r /tmp/semver/src/ /usr/local/bin/
+WORKDIR /home/bootcamp
+
+RUN git clone https://github.com/fsaintjacques/semver-tool.git && \
+    sudo cp -r ~/semver-tool/src/semver /usr/local/bin/ && \
+    rm -r ~/semver-tool && \
+    semver --version
 
 ENV HOME /home/bootcamp
 ENV PATH /home/bootcamp/.local/bin:/usr/local/bin/python3:/usr/local/bin/pip3:$PATH
-
-WORKDIR /home/bootcamp
 
 # tbcp/debian:latest
