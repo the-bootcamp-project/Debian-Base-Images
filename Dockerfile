@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt update && \
     apt install -y --no-install-recommends apt-utils && \
     apt upgrade -y && apt install -y \
-        build-essential gcc make cmake \
+        build-essential gcc shc make cmake \
         libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
         zip wget curl git git-flow sudo util-linux file \
         shellcheck
