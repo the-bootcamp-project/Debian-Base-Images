@@ -3,12 +3,11 @@
 <h1 align="center">Debian Base Images</h1>
 
 <div align="center">
-    <a href="https://bootcamp-project.com/" title="Docker Image Version (latest by date)" target="_blank"><img src="https://img.shields.io/docker/v/tbcp/debian?style=for-the-badge" alt="Docker Image Version (latest by date)" /></a>
-    <a href="https://bootcamp-project.com/" title="Docker Image Size (latest by date)" target="_blank"><img src="https://img.shields.io/docker/image-size/tbcp/debian?style=for-the-badge" alt="Docker Image Size (latest by date)" /></a>
-    <a href="https://bootcamp-project.com/" title="Docker Pulls" target="_blank"><img src="https://img.shields.io/docker/pulls/tbcp/debian?style=for-the-badge" alt="Docker Pulls" /></a>
-    <a href="https://bootcamp-project.com/" title="Docker Stars" target="_blank"><img src="https://img.shields.io/docker/stars/tbcp/debian?style=for-the-badge" alt="Docker Stars" /></a>
-    <a href="https://bootcamp-project.com/" title="Docker Image Version (latest by date)" target="_blank"><img src="https://img.shields.io/docker/v/tbcp/debian?style=for-the-badge" alt="Docker Image Version (latest by date)" /></a>
-    <a href="https://bootcamp-project.com/" title="Bootcamp Project: Debian Base Images" target="_blank"><img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge" alt="Bootcamp Project: debian Host in Docker" /></a>
+<img src="https://img.shields.io/docker/v/tbcp/debian?style=for-the-badge" />
+<img src="https://img.shields.io/docker/image-size/tbcp/debian?style=for-the-badge" />
+<img src="https://img.shields.io/docker/pulls/tbcp/debian?style=for-the-badge" />
+<img src="https://img.shields.io/docker/stars/tbcp/debian?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge" />
 </div>
 
 ## 👉 About 👈
