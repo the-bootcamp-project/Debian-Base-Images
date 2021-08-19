@@ -3,12 +3,12 @@
 <h1 align="center">Debian Base Images</h1>
 
 <div align="center">
-![Docker Image Version (latest by date)](https://img.shields.io/docker/v/tbcp/debian?style=for-the-badge)
-![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/tbcp/debian?style=for-the-badge)
-![Docker Pulls](https://img.shields.io/docker/pulls/tbcp/debian?style=for-the-badge)
-![Docker Stars](https://img.shields.io/docker/stars/tbcp/debian?style=for-the-badge)
-![Docker Image Version (latest by date)](https://img.shields.io/docker/v/tbcp/debian?style=for-the-badge)
-![Bootcamp Project: DataSourcing with Python](https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge)
+    <a href="https://bootcamp-project.com/" title="Docker Image Version (latest by date)" target="_blank"><img src="https://img.shields.io/docker/v/tbcp/debian?style=for-the-badge" alt="Docker Image Version (latest by date)" /></a>
+    <a href="https://bootcamp-project.com/" title="Docker Image Size (latest by date)" target="_blank"><img src="https://img.shields.io/docker/image-size/tbcp/debian?style=for-the-badge" alt="Docker Image Size (latest by date)" /></a>
+    <a href="https://bootcamp-project.com/" title="Docker Pulls" target="_blank"><img src="https://img.shields.io/docker/pulls/tbcp/debian?style=for-the-badge" alt="Docker Pulls" /></a>
+    <a href="https://bootcamp-project.com/" title="Docker Stars" target="_blank"><img src="https://img.shields.io/docker/stars/tbcp/debian?style=for-the-badge" alt="Docker Stars" /></a>
+    <a href="https://bootcamp-project.com/" title="Docker Image Version (latest by date)" target="_blank"><img src="https://img.shields.io/docker/v/tbcp/debian?style=for-the-badge" alt="Docker Image Version (latest by date)" /></a>
+    <a href="https://bootcamp-project.com/" title="Bootcamp Project: Debian Base Images" target="_blank"><img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge" alt="Bootcamp Project: debian Host in Docker" /></a>
 </div>
 
 ## 👉 About 👈
@@ -57,4 +57,4 @@ Project Link: [https://gitlab.com/the-bootcamp-project/containers/debian](https:
 
 ## 🏆 Acknowledgements 🏆
 
-Thanks for these awesome resources that were used during the development of the **Bootcamp Project: DataScience with Python in Docker**:
+Thanks for these awesome resources that were used during the development of the **Bootcamp Project: Debian Base Images**:
