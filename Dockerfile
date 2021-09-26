@@ -1,21 +1,12 @@
 FROM debian:latest
 
-ENV LANGUAGE en_US.utf8
-ENV LC_ALL en_US.utf8
-ENV LC_CTYPE en_US.utf8
-ENV LC_COLLATE en_US.utf8
-ENV LC_MESSAGES en_US.utf8
-ENV LANG en_US.utf8
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
 
 RUN apt update && apt upgrade -y
-RUN apt install -y locales
 
-RUN echo "Etc/UTC" > /etc/timezone && \
-    dpkg-reconfigure -f noninteractive tzdata && \
-    sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
-    echo 'LANG="en_US.UTF-8"'>/etc/default/locale && \
-    dpkg-reconfigure --frontend=noninteractive locales && \
-    update-locale LANG=en_US.UTF-8
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ | tee -a /etc/timezone
+RUN apt install -y tzdata
 
 RUN apt install -y \
     sudo build-essential gcc shc make cmake \
