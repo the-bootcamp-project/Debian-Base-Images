@@ -8,13 +8,7 @@ RUN apt update && apt upgrade -y
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ | tee -a /etc/timezone
 RUN apt install -y tzdata
 
-RUN apt install -y \
-    sudo build-essential gcc shc make cmake \
-    zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
-    zip wget curl nano git util-linux file \
-    shellcheck
-
-RUN apt autoremove -y
+RUN apt install -y sudo
 
 RUN adduser --disabled-password --gecos '' bootcamp && \
     adduser bootcamp sudo && \
