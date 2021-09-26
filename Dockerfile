@@ -22,9 +22,9 @@ RUN echo "Etc/UTC" > /etc/timezone && \
 
 RUN apt upgrade -y 2>/dev/null | grep packages | cut -d '.' -f 1 && \
     DEBIAN_FRONTEND=noninteractive apt install -y \
-        build-essential gcc shc make cmake \
+        sudo build-essential gcc shc make cmake \
         libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
-        zip wget curl nano git git-flow sudo util-linux file \
+        zip wget curl nano git util-linux file \
         shellcheck 2>/dev/null | grep packages | cut -d '.' -f 1
 
 RUN apt autoremove -y 2>/dev/null | grep packages | cut -d '.' -f 1
