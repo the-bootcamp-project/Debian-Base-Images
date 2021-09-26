@@ -1,6 +1,7 @@
 FROM debian:latest
 
-ENV DEBIAN_FRONTEND noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
 
 ENV LANGUAGE en_US.utf8
 ENV LC_ALL en_US.utf8
@@ -9,9 +10,7 @@ ENV LC_COLLATE en_US.utf8
 ENV LC_MESSAGES en_US.utf8
 ENV LANG en_US.utf8
 
-RUN apt clean 2>/dev/null && \
-    apt update 2>/dev/null | grep packages | cut -d '.' -f 1 && \
-    DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends apt-utils locales
+RUN apt update && apt upgrade -y && apt install -y --no-install-recommends apt-utils locales
 
 RUN echo "Etc/UTC" > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata && \
@@ -20,14 +19,13 @@ RUN echo "Etc/UTC" > /etc/timezone && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8
 
-RUN apt upgrade -y 2>/dev/null | grep packages | cut -d '.' -f 1 && \
-    DEBIAN_FRONTEND=noninteractive apt install -y \
-        sudo build-essential gcc shc make cmake \
-        libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
-        zip wget curl nano git util-linux file \
-        shellcheck 2>/dev/null | grep packages | cut -d '.' -f 1
+RUN apt install -y \
+    sudo build-essential gcc shc make cmake \
+    libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
+    zip wget curl nano git util-linux file \
+    shellcheck
 
-RUN apt autoremove -y 2>/dev/null | grep packages | cut -d '.' -f 1
+RUN apt autoremove -y
 
 RUN adduser --disabled-password --gecos '' bootcamp && \
     adduser bootcamp sudo && \
