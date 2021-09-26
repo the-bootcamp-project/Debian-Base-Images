@@ -10,7 +10,7 @@ RUN apt install -y tzdata
 
 RUN apt install -y \
     sudo build-essential gcc shc make cmake \
-    libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
+    zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
     zip wget curl nano git util-linux file \
     shellcheck
 
