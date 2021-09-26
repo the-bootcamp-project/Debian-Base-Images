@@ -1,8 +1,5 @@
 FROM debian:latest
 
-ARG DEBIAN_FRONTEND=noninteractive
-ENV TZ=Etc/UTC
-
 ENV LANGUAGE en_US.utf8
 ENV LC_ALL en_US.utf8
 ENV LC_CTYPE en_US.utf8
@@ -10,7 +7,8 @@ ENV LC_COLLATE en_US.utf8
 ENV LC_MESSAGES en_US.utf8
 ENV LANG en_US.utf8
 
-RUN apt update && apt upgrade -y && apt install -y --no-install-recommends apt-utils locales
+RUN apt update && apt upgrade -y
+RUN apt install -y locales
 
 RUN echo "Etc/UTC" > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata && \
