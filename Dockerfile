@@ -8,7 +8,7 @@ RUN apt update && apt upgrade -y
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ | tee -a /etc/timezone
 RUN apt install -y tzdata
 
-RUN apt install -y sudo
+RUN apt install -y sudo git curl
 
 RUN adduser --disabled-password --gecos '' bootcamp && \
     adduser bootcamp sudo && \
