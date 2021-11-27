@@ -124,9 +124,9 @@ See [LICENSE](LICENSE) for more information.
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 
-[Repo_Homepage]: https://gitlab.com/the-bootcamp-project/containers/debian
+[Repo_Homepage]: https://containers.bootcamp-project.com/#/base_os/debian
 [Repo_URL]: https://gitlab.com/the-bootcamp-project/containers/debian
-[Repo_Docs]: https://containers.bootcamp-project.com
+[Repo_Docs]: https://containers.bootcamp-project.com/#/base_os/debian
 [Repo_Issues]: https://gitlab.com/the-bootcamp-project/containers/debian/-/issues
 [TBCP_Contribution]: https://bootcamp-project.com/#code_of_conduct
 [TBCP_Homepage]: https://bootcamp-project.com
