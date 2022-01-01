@@ -1,27 +1,19 @@
 FROM debian:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
-ENV TZ=Etc/UTC
+ARG USER=bootcamp
 
 RUN apt update && apt upgrade -y
 
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ | tee -a /etc/timezone
-RUN apt install -y tzdata
+RUN apt install -y ca-certificates gnupg sudo git curl
 
-RUN apt install -y sudo git curl
-
-RUN adduser --disabled-password --gecos '' bootcamp && \
-    adduser bootcamp sudo && \
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
-    chown -R bootcamp /home/bootcamp
+RUN adduser --disabled-password --gecos '' $USER && \
+    echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER && \
+    chmod 0440 /etc/sudoers.d/$USER
 
 USER bootcamp
 
 ENV HOME /home/bootcamp
-ENV PATH /home/bootcamp/.local/bin:/usr/local/bin/python3:/usr/local/bin/pip3:$PATH
+ENV PATH /home/bootcamp/.local/bin:$PATH
 
 WORKDIR /home/bootcamp
-
-RUN https://gitlab.com/the-bootcamp-project/companion/cli/-/raw/main/install.sh | bash
-
-# tbcp/debian:latest
